@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Management System</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="index.js"></script>
+    <style>
+        #noticeBoard {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row pt-4 pl-4 pr-4">
+            <div class="col text-center text-capitalize">
+                <h1>Hostel Database Management System</h1>
+            </div>
+        </div>
+        <hr class="mt-0">
+
+        <div class="row p-4">
+            <div class="col-3">
+                <button class="btn text-white btn-primary col-12" id="showStudentDetails">View Details</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="showAttendance">View Attendance</button>
+                <br/><br/>
+                <button class="btn btn-primary text-white col-12" id="apply">Apply</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="viewInventory">View Hostel Inventory</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="viewFines">View Fees</button>
+                <br/><br/>
+                <!--<button id="viewApplicationStatus" class="btn text-white btn-primary col-12">View Application Status</button><br/><br/>-->
+            </div>
+            <div class="col-9">
+                <div class="border p-5 bg-light" id="noticeBoard">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

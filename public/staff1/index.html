@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+
+    <div aria-hidden="true" aria-labelledby="Add Staff Modal" class="modal fade" id="addStaffModal" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header customModalHeader">
+                    <h5 class="modal-title customModalTitle text-center" style="">Add Staff</h5>
+                    <button aria-label="Close" class="close ml-0" data-dismiss="modal" type="button">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-0" id="addStaffForm">
+                        <label class="mr-2 customLabel" for="name">Staff Name: </label>
+                        <input class="form-control mb-2" id="name" required type="text"><br>
+                        <label class="mr-2 customLabel" for="salary">Staff Salary: </label>
+                        <input class="form-control mb-2" id="salary" required type="text"><br>
+                        <label class="mr-2 customLabel" for="selectHostelsList">Hostels: </label>
+                        <select class="custom-select mb-2" id="selectHostelsList">
+                            <option value="1">BH1</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="text-center text-danger" id="addStaffError"></p>
+                <div class="modal-footer customFooter">
+                    <button class="btn btn-success addButtons" id="submitStaffBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row pt-4 pl-4 pr-4">
+            <div class="col text-center text-capitalize">
+                <h1>Hostel Database Management System</h1>
+            </div>
+        </div>
+        <hr class="mt-0">
+        <div class="row p-4">
+            <div class="col-3">
+                <a class="btn btn-outline-primary sideButtons" href="/hostel">Hostel</a>
+                <a class="btn btn-outline-primary sideButtons" href="/applicant">Applicant</a>
+                <a class="btn btn-outline-primary sideButtons" href="/application">Application</a>
+                <a class="btn btn-outline-primary sideButtons active" href="/staff">Staff</a>
+                <br>
+
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <h1 class="m-0" id="title">Staffs</h1>
+                        </div>
+                        <div class="col-sm-3 mt-auto mb-auto">
+                            <button class="btn btn-primary addButtons" data-target="#addStaffModal" data-toggle="modal">
+                                Add Staff
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row p-5">
+                        <ul class="list-group" id="staffsList" style="width: 100%">
+                            <li class="list-group-item">
+                                <div class="row text-center">
+                                    <div class="col-3"><b>Name</b></div>
+                                    <div class="col-3"><b>Salary</b></div>
+                                    <div class="col-3"><b>Hostel</b></div>
+                                    <div class="col-3">
+                                        <b>Edit/Delete</b>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

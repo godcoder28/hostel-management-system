@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Management System</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row pt-4 pl-4 pr-4">
+            <div class="col text-center text-capitalize">
+                <h1>Hostel Database Management System</h1>
+            </div>
+        </div>
+        <hr class="mt-0">
+
+        <div class="row mt-5" id="wardenLoginDiv">
+            <div class="col">
+                <div class="form-group">
+                    <input class="form-control input" id="loginUsername" placeholder="Roll Number"
+                           type="text">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input" id="loginPassword" placeholder="Password"
+                           type="password">
+                </div>
+                <div class="text-danger text-capitalize" id="errorLogin">
+                </div>
+                <div class="text-danger" id="error">
+
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info btn-block btn-lg btn-style" id="loginButton">Login
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            if (localStorage.getItem("hid")) {
+                $('body').append(`
+        <style>
+          #wardenLoginDiv {
+            display: none;
+          }
+        </style>
+      `)
+            } else {
+                $('body').append(`
+        <style>
+          #wardenDiv {
+            display: none;
+          }
+        </style>
+      `)
+            }
+        </script>
+
+
+        <div class="row pt-2" id="wardenDiv">
+            <div class="col-2">
+                <br/>
+                <button class="btn text-white btn-primary col-12" id="viewApplications">View Pending Applications
+                </button>
+                <br/><br/>
+                <!--add facility to approve pending applications here, also list empty rooms-->
+                <button class="btn text-white btn-primary col-12" id="listRoomStats">List room stats</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="addAttendance">Add/View Attendance</button>
+                <br/><br/>
+                <button class="btn btn-primary text-white col-12" id="startApplicationPeriod">Start Application Period
+                </button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="addFine">Add Fees</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="viewFines">View Fees</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="clearFines">Clear Fees</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="addInventory">Add Inventory</button>
+                <br/><br/>
+                <button class="btn text-white btn-primary col-12" id="viewInventory">View Inventory</button>
+                <br/><br/>
+            </div>
+            <div class="col-10">
+                <div class="border h-100 bg-light" id="noticeBoard">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

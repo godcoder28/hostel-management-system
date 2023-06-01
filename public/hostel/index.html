@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Management System</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+
+    <div aria-hidden="true" aria-labelledby="Add Hostel Modal" class="modal fade" id="addHostelModal" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header customModalHeader">
+                    <h5 class="modal-title customModalTitle text-center" style="">Add Hostel</h5>
+                    <button aria-label="Close" class="close ml-0" data-dismiss="modal" type="button">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-0" id="addHostelForm">
+                        <label class="mr-2 customLabel" for="name">Hostel Name: </label>
+                        <input class="form-control mb-2" id="name" required type="text"><br>
+                        <label class="mr-2 customLabel" for="capacity">Hostel Capacity: </label>
+                        <input class="form-control mb-2" id="capacity" required type="text"><br>
+                    </div>
+                </div>
+                <p class="text-center text-danger" id="addHostelError"></p>
+                <div class="modal-footer customFooter">
+                    <button class="btn btn-success addButtons" id="submitHostelBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div aria-hidden="true" aria-labelledby="Edit Hostel Modal" class="modal fade" id="editHostelModal" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"
+                     style="border: none; background-color: #02B3E4; counter-reset: white; border-top-left-radius: .25rem; border-top-right-radius: .25rem">
+                    <h5 class="modal-title text-center" style="margin: 0 auto; font-size: 18px; color: white">Add
+                        Airlines</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" style="margin-left: 0" type="button">
+                        <span aria-hidden="true" style="color: white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" id="editAirlinesForm" style="margin-bottom: 0">
+                        <label class="mr-2" for="editAirlinesCode"
+                               style="color: #777; font-size: 1rem; display: inline-block">Airlines
+                            Code: </label>
+                        <input class="form-control input" id="editAirlinesCode" required style="margin-bottom: 15px"
+                               type="text"><br>
+                        <label class="mr-2" for="editAirlinesName"
+                               style="color: #777; font-size: 1rem; display: inline-block">Airlines
+                            Name: </label>
+                        <input class="form-control input" id="editAirlinesName" required style="margin-bottom: 15px"
+                               type="text"><br>
+
+                    </div>
+                </div>
+                <p class="text-center" id="editAirlinesError" style="color: red;"></p>
+                <div class="modal-footer" style="border: none; justify-content: center; padding-top: 5px">
+                    <button class=" btn btn-success" id="editAirlinesSubmit"
+                            style="padding: 5px 15px;font-size: 14px; border-radius: 0.25rem; cursor: pointer;">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pt-4 pl-4 pr-4">
+            <div class="col text-center text-capitalize">
+                <h1>Hostel Database Management System</h1>
+            </div>
+        </div>
+        <hr class="mt-0">
+        <div class="row p-4">
+            <div class="col-3">
+                <a class="btn btn-outline-primary sideButtons active" href="/hostel">Hostel</a>
+                <a class="btn btn-outline-primary sideButtons" href="/student">student</a>
+                <a class="btn btn-outline-primary sideButtons" href="/application">Application</a>
+                <a class="btn btn-outline-primary sideButtons" href="/staff">Staff</a>
+                <br>
+
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <h1 class="m-0" id="title">Hostels</h1>
+                        </div>
+                        <div class="col-sm-3 mt-auto mb-auto">
+                            <button class="btn btn-primary addButtons" data-target="#addHostelModal"
+                                    data-toggle="modal">
+                                Add Hostel
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row p-5">
+                        <ul class="list-group" id="hostelsList" style="width: 100%">
+                            <li class="list-group-item">
+                                <div class="row text-center">
+                                    <div class="col-3"><b>Name</b></div>
+                                    <div class="col-6"><b>Capacity</b></div>
+                                    <div class="col-3">
+                                        <b>Edit/Delete</b>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
