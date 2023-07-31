@@ -9,8 +9,8 @@
 > Make sure to have the latest version of node and npm installed
 
 ```bash
-#git clone https://github.com/shivanggupta/Hostel-Management-DBMS-Project
-cd Hostel-Management-DBMS-Project
+#git clone https://github.com/godcoder28/hostel-management-system
+cd hostel-management-system
 npm install
 ```  
 
